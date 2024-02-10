@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function Cards({id , name, info ,image , price , removeTour}){
     const [readmore , setReadmore] = useState(false) ;
-    const description = readmore?info:`${info.substring(0,140)}....` ;
+    const description = readmore?info:`${info.substring(0,220)}....` ;
 
     function handleReadmore(){
         setReadmore(!readmore) ;
@@ -15,14 +15,17 @@ function Cards({id , name, info ,image , price , removeTour}){
                 <h4 class =  "text-green-500 font-extrabold text-lg ">₹ {price}</h4>
                 <h4 class =  "font-extrabold text-lg  font-" >{name}</h4>
             </div>
-            <div>
+            <div onClick={handleReadmore} class = "cursor-pointer">
                 {description}
-                <span class = "text-blue-700 cursor-pointer" onClick={handleReadmore}>
+                <span class = "text-blue-700 cursor-pointer" onClick={(e) => {
+                    e.stopPropagation() ;
+                    handleReadmore()
+                }}>
                     {readmore ? "..Show Less" : "Read More"}
                 </span>
             </div>
 
-            <button class = " bg-red-300 w-[10rem] mx-auto my-3 py-2 hover:bg-red-600 text-black font-semibold hover:text-white transition-all duration-75 rounded-md" onClick={() => removeTour(id)}>Not Interested</button>
+            <button class = " bg-red-300 w-[10rem] mx-auto my-3 py-2 hover:bg-red-600 text-black font-semibold hover:text-white transition-all duration-150 rounded-md" onClick={() => removeTour(id)}>Not Interested</button>
         </div>
     ) ;
 }

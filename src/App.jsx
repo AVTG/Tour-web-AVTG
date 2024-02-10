@@ -13,9 +13,9 @@ const App = () => {
 
   if(tours.length === 0){
     return (
-      <div class = "text-center flex flex-col items-center justify-center h-[100vh] gap-2">
-        <h2 class = "text-3xl font-semibold">No Tours Left</h2>
-        <button class = "bg-slate-400 px-5 py-1 rounded-md font-semibold text-lg" onClick={()=> setTours(data)}>Refresh</button>
+      <div class = "text-center flex flex-col items-center justify-center h-[100vh] gap-4">
+        <h2 class = "text-3xl font-semibold w-[22rem]">No Tours Left</h2>
+        <button class = "bg-slate-400 px-5 py-1 rounded-md font-semibold text-lg" onClick={()=> setTours(data)}>Try Again</button>
       </div>
     )
   }
