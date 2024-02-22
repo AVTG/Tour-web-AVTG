@@ -1,4 +1,4 @@
-import Cards from "./Cards";
+import Cards from "./Cards.jsx";
 
 function Tours({tours ,removeTour}) {
     return (
