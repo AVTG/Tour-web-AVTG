@@ -1,6 +1,6 @@
 {
   "homepage": "http://AVTG.github.io/Tourist-Planner",
-  "name": "react-tailwind-css-starter-pack",
+  "name": "tourism",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,18 +9,8 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git"
-  },
-  "author": "Pranay Gupta",
-  "bugs": {
-    "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
-  },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
